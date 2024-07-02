@@ -1,0 +1,358 @@
+@font-face {
+    font-family: futura;
+    src: url(Futura-Bold.ttf);
+}
+@font-face {
+  font-family: helvatica;
+  src: url(HelveticaNowText-Regular.ttf);
+}
+*::selection{
+  background-color: black;
+  color: white;
+}
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box
+}
+
+html,body {
+  width:100%;
+  height:100%;
+  background-color:#d8d7d7 ;
+}
+#nav{
+  width: 100%;
+  /* height: 100px; */
+  /* background-color: aqua; */
+  position: fixed;
+  z-index: 9999;
+  padding: 20px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+#navp1{
+  /* background-color: rebeccapurple; */
+  height: 82px;
+  overflow: hidden;
+}
+#navp1 svg{
+  display: block;
+}
+#nav #navp2{
+  display: flex;
+  margin-top: 10px;
+  gap: 70px;
+}
+#nav a{
+  color: #333;
+  font-size: 1vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: helvatica;
+}
+#links{
+  display: flex;
+  gap: 70px;
+  /* margin-right: 60px; */
+}
+#icon{
+  display: flex;
+  gap: 70px;
+  height: fit-content;
+  font-size: 1.2vw;
+  padding: 10px 10px;
+  margin-right: 20px;
+  margin-top: -20px;
+  background-color: #d8d7d7;
+  border-radius: 50px;
+}
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: aqua; */
+    font-family: futura;
+    padding-top: 10vw;
+}
+#page1 #top{
+  display: flex;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-family: helvatica;
+  margin-top: 50px;
+}
+#page1 h1{
+    font-size: 15vw;
+    line-height: 13vw;
+    padding-left: 2vw;
+    text-transform: uppercase;
+}
+#round{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  background-color: #111;
+  opacity: 0;
+}
+#page1 #img{
+  width: 95%;
+  height: 100vh;
+  position: relative;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%);
+  background:url(pexels-olly-927022.jpg) ;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2vw;
+  /* padding: 0 2vw; */
+}
+#page2{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 2vw;
+  gap: 2vw;
+  filter: brightness(90%);
+}
+#page2 .elem{
+  width: 100%;
+  height: 100vh;
+  /* background-color: rebeccapurple; */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page2 .elem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+.elem .dets{
+  width: 70%;
+  height: 60px;
+  position: absolute;
+  background-color: #F5DFCF;
+  transition: all linear .1s;
+  border-radius: 50px;
+  margin-top: 1vw;
+  z-index: 2;
+}
+.dets .circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #222;
+}
+.dets .contant{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-family: "HelveticaNeueLT Std";
+  font-size: 1vw;
+  color: #222;
+  font-style:normal ;
+}
+#contant{
+  background-color: #F5DFCF;
+  position: absolute;
+}
+.contant i{
+  font-size: 1.5vw;
+}
+#shutter{
+  width: 200px;
+  will-change: height;
+  background-color: #d8d7d7;
+  position: absolute;
+  z-index: 1;
+  width: 70%;
+  border-radius: 50px 50px 20px 20px ;
+  /* margin-top: 90px; */
+}
+#page3{
+  width: 100%;
+  min-height: 120vh;
+  /* background-color: #111; */
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#page3 .img{
+  width: 40%;
+  height: 80vh;
+  /* background-color: #F5DFCF;  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.img img{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+#page3 h3{
+  font-size: .9vw;
+  text-align: center;
+  font-family: helvatica ;
+  line-height: 2;
+  font-weight: 300;
+}
+#page3 span{
+  font-size: .7vw;
+}
+#crsr{
+  width: 300px;
+  height: 300px;
+  background-color: #8b8b8b;
+  position: absolute;
+  opacity: 0;
+  /* z-index: -1; */
+  border-radius: 50%;
+  transform: translate(-50% , -50%) scale(0);
+}
+@media (max-width: 600px) {
+  #icon{
+    display: flex;
+    gap: 70px;
+    height: fit-content;
+    font-size: 20px;
+    padding: 10px 10px;
+    margin-top: 13px;
+    /* margin-right: 20px; */
+    background-color: #d8d7d7;
+    border-radius: 50px;
+  }
+  #links{
+    display: none;
+  }
+  #page1 h1{
+    font-size: 15vw;
+    line-height: 13vw;
+    padding-left: 2vw;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+#page1{
+  font-family: futura;
+  padding-top: 10vw 3vw;
+  min-height: 70vh;
+  margin-top: 200px;
+}
+#page1 #img{
+  height: 36vh;
+  margin-top: 3vw;
+  /* padding: 0 2vw; */
+}
+#round{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  opacity: 1;
+  scale: 1;
+}
+#page2{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vw 2vw;
+  gap: 4vw;
+}
+#page2 h4 , span {
+  font-size: 12px;
+}
+#page2 i{
+  font-size: 13px;
+}
+#page2 .elem{
+  width: 100%;
+  height: 100vh;
+  /* background-color: rebeccapurple; */
+  overflow: hidden;
+  filter: brightness(90%);
+}
+#page2 .elem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+#page3{
+  width: 100%;
+  min-height: 120vh;
+  /* background-color: #111; */
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#page3 .img{
+  width: 90%;
+  height: 80vh;
+  /* background-color: #F5DFCF;  */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 50px;
+}
+.img img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+#page3 h3{
+  font-size: 4vw;
+  text-align: center;
+  font-family: helvatica ;
+  line-height: 2;
+  font-weight: 300;
+}
+#page3 span{
+  font-size: .7vw;
+}
+#simage4 img{
+  width: 90%;
+  height: 70%;
+}
+#crsr{
+  width: 300px;
+  height: 300px;
+  background-color: #8b8b8b;
+  position: absolute;
+  opacity: 0;
+  /* z-index: -1; */
+  border-radius: 50%;
+  transform: translate(-50% , -50%) scale(0);
+}
+#navp2 #links{
+  opacity: 0;
+}
+}
